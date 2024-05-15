@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffb6c1;
+            padding: 0.5em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 1em;
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 800px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+        footer {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .project, .job {
+            background-color: #f9f9f9;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-left: 5px solid #ff6347;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 0.7em;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ruang Warga RT 04 RW 04</h1>
+        <p>Membangun Kebersamaan Yang Ber-Adab Bermartabat</p>
+    </header>
+    <nav>
+        <a href="#jobs">Pekerjaan</a>
+        <a href="#projects">Proyek</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+    <section id="jobs">
+        <h2>Pekerjaan</h2>
+        <div class="job">
+            <h3>Judul Pekerjaan 1</h3>
+            <p>Deskripsi singkat tentang pekerjaan ini. Apa yang Anda lakukan, tanggung jawab Anda, dan pencapaian utama.</p>
+        </div>
+        <div class="job">
+            <h3>Judul Pekerjaan 2</h3>
+            <p>Deskripsi singkat tentang pekerjaan ini. Apa yang Anda lakukan, tanggung jawab Anda, dan pencapaian utama.</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Proyek</h2>
+        <div class="project">
+            <h3>Nama Proyek 1</h3>
+            <p>Deskripsi singkat tentang proyek ini. Tujuan, proses, dan hasil dari proyek ini.</p>
+        </div>
+        <div class="project">
+            <h3>Nama Proyek 2</h3>
+            <p>Deskripsi singkat tentang proyek ini. Tujuan, proses, dan hasil dari proyek ini.</p>
+        </div>
+    </section>
+    <section id="gallery">
+        <h2>Galeri</h2>
+        <div class="gallery">
+            <img src="gambar1.jpg" alt="Deskripsi Gambar 1">
+            <img src="gambar2.jpg" alt="Deskripsi Gambar 2">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Kontak</h2>
+        <form class="contact-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Nama Anda. Semua hak cipta dilindungi.</p>
+    </footer>
+    <script>
+        // JavaScript untuk fitur tambahan, seperti validasi formulir atau interaktivitas lainnya
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Terima kasih telah menghubungi kami, ' + document.getElementById('name').value + '!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
